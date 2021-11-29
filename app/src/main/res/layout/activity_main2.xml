@@ -9,7 +9,7 @@
 
     <ImageButton
         android:id="@+id/btnback"
-        android:background="@drawable/backstrelka"
+        android:background="@drawable/ic_backarrow"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_margin="15dp"/>
