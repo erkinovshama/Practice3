@@ -29,14 +29,22 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             val intent = Intent(this,MainActivity2::class.java)
             when{
-                editText.text.toString() == "1" -> intent.putExtra("IMAGESS", R.drawable.images1)
-                editText.text.toString() == "2" -> intent.putExtra("IMAGESS", R.drawable.images2)
-                editText.text.toString() == "3" -> intent.putExtra("IMAGESS", R.drawable.images3)
+                editText.text.toString() == "1" -> {
+                    intent.putExtra("IMAGESS", R.drawable.images1)
+                    startActivity(intent)
+                }
+                editText.text.toString() == "2" -> {
+                    intent.putExtra("IMAGESS", R.drawable.images2)
+                    startActivity(intent)
+                }
+                editText.text.toString() == "3" -> {
+                    intent.putExtra("IMAGESS", R.drawable.images3)
+                    startActivity(intent)
+                }
                 else -> {
                     Toast.makeText(this,"ERROR", Toast.LENGTH_SHORT).show()
                 }
             }
-            startActivity(intent)
         }
     }
 }
